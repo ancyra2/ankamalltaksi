@@ -1,0 +1,103 @@
+@use './variables' as var;
+
+$menu-heigth:70px;
+$header-text:2rem;
+
+.home{
+    position: relative;
+    .home-screen{
+        .home-screen-img{
+            img{
+                width: 100%;
+                height: calc(100vh);
+            }   
+        }
+    .home-info{
+        position: absolute;
+        top: calc(100vh - 75%);
+        color: var.$ligth-text-color;
+        text-align: center;
+        z-index: 1;
+        h1{
+            font-weight: 600;
+            font-size: 2rem;
+            
+        }
+        span{
+            font-weight: 600;
+            font-size: 2rem;
+            
+        }
+        h2{
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+           
+        }
+        h3{
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .btn-taxi{
+            background-color: var.$taxi-color;
+            color: var.$first-text-color;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 2rem;
+            padding: 0.5rem;
+            width: 150px;
+        }
+       
+    }
+    .gray-store{
+        position: absolute;
+        top:0;
+        height: calc(100vh );
+        width: 100%;
+        background-color: #212529;
+        opacity: 0.5;
+    }
+}
+}
+
+.ankamall-pr{
+    .pr-text{
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var.$first-text-color;
+        text-align: center;
+    }
+    .pr-taxi{
+        img{
+            width: 200px;
+            height: 100%;
+        }
+    }
+    .pr-time{
+        img{
+            background-color: var.$taxi-color;
+            width: 160px;
+            height: 160px;
+            border-radius: 80px;
+            padding: 1rem;
+        }
+    }
+}
+.ankamall-pr2{
+    height: 350px;
+    img{
+        background-color: var.$taxi-color;
+        width: 160px;
+        height: 160px;
+        border-radius: 80px;
+        padding: 1rem;
+    }
+    .pr-text{
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var.$first-text-color;
+        text-align: center;
+    }
+}

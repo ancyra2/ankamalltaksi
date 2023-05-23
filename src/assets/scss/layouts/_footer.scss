@@ -1,0 +1,37 @@
+@use './variables' as var;
+
+.footer{
+    position: relative;
+    .footer-wrapper{
+        height: 300px;
+        background-color: var.$first-text-color;
+
+    .footer-header{
+        color: var.$taxi-color;
+        margin-top: 1rem;
+        font-size: 1.25rem;
+    }
+    ul{
+        padding-left: 0;
+        li{
+            list-style-type: none;
+            padding-top: 2x;
+            padding-bottom: 2px;
+            a{
+                text-decoration: none;
+                color: var.$taxi-color;
+                font-size: 0.75rem;
+            }
+        }
+    }
+  }
+  .rigths{
+    position: absolute;
+    bottom: 0;
+    color: var.$taxi-color;
+    font-size: 0.75rem;
+    text-align: center;
+    width: 100%;
+  }
+  
+}

@@ -1,0 +1,91 @@
+@use './variables' as var;
+
+.ankamall-nav{
+    .container{
+    height: 70px;
+    background-color: var.$taxi-color;
+    position: fixed;
+    z-index: 3;
+    .hamb-menu{
+        position: relative;
+        top: 20px;
+        width: 30px;
+        height: 40px;
+        margin-left: 15px;
+        &:hover{
+            cursor: pointer;
+        }
+        .hamb-line{
+            position: absolute;
+            top: 15px;
+            display: block;
+            width: 24px;
+            height: 3px;
+            background-color: black;
+            margin-left: 2px;
+            content:"";  
+        }
+        .hamb-line::before{
+            position: absolute;
+            top: -10px;
+            display: block;
+            width: 24px;
+            height: 3px;
+            background-color: black;
+            content:"";
+        }
+        .hamb-line::after{
+            position: absolute;
+            top: 10px;
+            display: block;
+            width: 24px;
+            height: 3px;
+            background-color: black;
+            content:"";
+        }
+    }
+}
+    .menu-bar{
+        height: 180px;
+        background-color: var.$taxi-color;
+        position: fixed;
+        top: -180px ;
+        z-index: 2;
+        width: 100%;
+        ul{
+            padding-left: 0;
+            li{
+                padding: 0.25em;
+                padding-left: 1em;     
+                list-style-type: none;
+                border-bottom: 1px solid #eee;
+                border-bottom-color:hsl(0, 0%, 100%,0.15);
+                a{
+                    text-decoration: none;
+                    color: var.$first-text-color;
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+@keyframes expand {
+    from{
+        top: -180px;
+    }
+    to{
+        top: 70px;
+    }
+}
+
+@keyframes colapse {
+    from{
+        top: 70px;
+    }
+    to{
+        top: -180px;
+    }
+}
+
