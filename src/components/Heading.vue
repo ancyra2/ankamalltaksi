@@ -1,4 +1,5 @@
 <template> 
+<!-- Header Starts-->
 <header>
     <nav class="ankamall-nav">
         <div class="container">
@@ -8,14 +9,16 @@
         </div>
         <div class="menu-bar" :style="{animation:animation,top:topPosition}">
                 <ul>
-                    <li v-for="menu in menus " :key="menu">
-                        <a href="#">{{menu}}</a>
+                    <li v-for="pages in menus.pages" :key="pages.name" @click="closeMenu">
+                        <router-link :to="pages.path">{{pages.name}}</router-link>
                     </li>
                 </ul>
+                
         </div>   
            
     </nav>
 </header>
+<!-- Header Ends-->
 </template>
 
 <script>
@@ -39,6 +42,11 @@ export default{
                 this.animation = 'colapse 0.3s ease'
             } 
         },
+        closeMenu(){
+                this.activeState = 0
+                this.topPosition = '-180px';
+                this.animation = 'colapse 0.3s ease'
+        }
     },
     props:['menus']
 }

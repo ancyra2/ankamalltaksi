@@ -9,7 +9,7 @@
     .footer-header{
         color: var.$taxi-color;
         margin-top: 1rem;
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
     ul{
         padding-left: 0;
@@ -23,6 +23,12 @@
                 font-size: 0.75rem;
             }
         }
+    }
+    .tel{
+        margin-top: 3.25rem;
+        color: var.$taxi-color;
+        font-size: 0.75rem;
+        
     }
   }
   .rigths{

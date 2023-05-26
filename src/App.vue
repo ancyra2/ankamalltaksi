@@ -2,24 +2,33 @@
 import Home from './components/Home.vue'
 import Heading from './components/Heading.vue'
 import Footing from './components/Footing.vue'
+import { RouterView } from 'vue-router'
 
 export default{
       components:{
-            Home,
-            Heading,
-            Footing,
-      },
+    Heading,
+    Footing,
+
+},
       data(){
             return{
-                  menus:["Anasayfa","Hizmetlerimiz","Galeri","İletişim","Hakkımızda"]
+                  menus:{
+                        pages:[
+                              {name:"Anasayfa", path:'/'},{name:"Hizmetlerimiz", path:"/#"},
+                              {name:"Galeri",path:"/galery"},{name:"İletişim", path:'/contact'},
+                              {name:"Hakkımızda",path:'/about'}
+                  ],
+                        
+            
             }
       }
+}
 }
 </script>
 
 <template>
       <Heading :menus="menus"/>
-      <Home/>
+      <RouterView/>
       <Footing :menus="menus"/>
 </template>
 
